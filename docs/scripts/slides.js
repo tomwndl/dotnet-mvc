@@ -2,18 +2,18 @@ import {SfeirThemeInitializer} from '../web_modules/sfeir-school-theme/sfeir-sch
 
 // One method per module
 function schoolSlides() {
-  return ['00-conf/00-TITLE.md', '00-conf/01-speaker-genez-t.md'];
+  return ['00-conf/01-speaker.md'];
 }
 
-function introSlides() {
+function controllerSlides() {
   return [
-    '01-intro/00-TITLE.md',
-    '01-intro/01-terraform.md',
-    '01-intro/02-a-quoi-sert-terraform.md',
-    '01-intro/03-HCL.md',
-    '01-intro/04-state.md',
-    '01-intro/05-project.md',
-    '01-intro/06-command.md'
+    '01-controller/00-TITLE.md',
+    '01-controller//01-Intro-et-rappel.md',
+    '01-controller//02-anatomie-controller.md',
+    '01-controller//03-routes.md',
+    '01-controller//04-filtres.md',
+    '01-controller//05-project.md',
+    '01-controller//06-command.md'
   ];
 }
 
@@ -29,7 +29,7 @@ function formation() {
   return [
     //
     ...schoolSlides(), //
-    ...introSlides(), //
+    ...controllerSlides(), //
     ...gcpSlides(), //
     ...awsSlides(), //
   ].map((slidePath) => {
