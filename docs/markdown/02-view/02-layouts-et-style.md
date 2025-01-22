@@ -17,9 +17,12 @@ Le concept de layout permet de définir une mise en page commune :
 </html>
 
 ```
+La méthode @RenderBody() dans le fichier _Layout.cshtml d'un projet ASP.NET Core MVC est utilisée pour insérer dynamiquement le contenu des vues spécifiques à l'intérieur du layout commun.
 
-Dans index :
+##==##
 
+# Layout
+Dans Home/Index.cshtml
 ``` cshtml
 @{
     ViewData["Title"] = "Home Page";
@@ -29,21 +32,18 @@ Dans index :
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
-
-
 ```
 
 Notes:
 - 
-
 ##==##
+
 # Layout : Exercice (5min)
 
 Modifier le layout :
 - Changer le titre de l'application : BPMED Formation
 - Supprimer l'onglet "privacy"
 - Modifier le footer egalement (titre et onglet lien "Privacy")
-
 
 ##==##
 
@@ -97,7 +97,7 @@ Si un style est spécifique à une page, tu peux l'ajouter dans la vue elle-mêm
 
 # CSS : Exercice (5 min) 
 
-- Mettre le titre l'application en bleu (bleu banque populaire #062499)
+- Mettre le titre l'application en bleu (bleu "banque populaire" #062499)
 - Mettre le footer en bleu 
 - Mettre le texte du footer en blanc
 

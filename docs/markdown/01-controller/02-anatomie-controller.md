@@ -13,7 +13,6 @@ public IActionResult Privacy() // Home/Privacy
     return View(); // renvoie une vue
 }
 ```
-<!-- .element: class="list-fragment" -->
 
 Notes:
 - Note  

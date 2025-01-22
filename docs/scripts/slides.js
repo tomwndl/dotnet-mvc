@@ -8,30 +8,38 @@ function schoolSlides() {
 function controllerSlides() {
   return [
     '01-controller/00-TITLE.md',
-    '01-controller//01-Intro-et-rappel.md',
-    '01-controller//02-anatomie-controller.md',
-    '01-controller//03-routes.md',
-    '01-controller//04-filtres.md',
-    '01-controller//05-project.md',
-    '01-controller//06-command.md'
+    '01-controller/01-Intro-et-rappel.md',
+    '01-controller/02-anatomie-controller.md',
+    '01-controller/03-routes.md',
+    '01-controller/04-filtres.md',
+    '01-controller/05-questions.md',
   ];
 }
 
-function awsSlides() {
-  return ['03-aws/00-TITLE.md', '03-aws/01-aws.md'];
+function viewslides() {
+  return [
+    '02-view/00-TITLE.md',
+    '02-view/01-intro.md',
+    '02-view/02-layouts-et-style.md',
+    '02-view/03-communication-controller.md',
+    '02-view/04-Helper.md',
+  ];
+}
+function modelSlides() {
+  return [
+    '03-Model/00-TITLE.md',
+    '03-Model/01-model-vs-dto.md'
+  ];
 }
 
-function gcpSlides() {
-  return ['02-gcp/00-TITLE.md', '02-gcp/02-gcp.md'];
-}
 
 function formation() {
   return [
     //
     ...schoolSlides(), //
     ...controllerSlides(), //
-    ...gcpSlides(), //
-    ...awsSlides(), //
+    ...viewslides(), //
+    ...modelSlides(), //
   ].map((slidePath) => {
     return {path: slidePath};
   });

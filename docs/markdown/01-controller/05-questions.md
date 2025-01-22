@@ -1,13 +1,12 @@
 ##  Questions
 
-- Qu'est-ce qu'un contrôleur dans ASP.NET MVC et quel est sont ses rôles principal dans l'architecture MVC ?
+- Qu'est-ce qu'un contrôleur dans ASP.NET MVC et quel sont ses rôles principal dans l'architecture MVC ?
 - Reponse :
 * Point d'entrée du back-end
 * Traite les requêtes HTTP
 * Coordonne les interactions entre Model et Vue
 * Gère la logique de navigation
 * Prépare les données pour l'affichage
-<!-- .element: class="list-fragment" -->
 
 ##==##
 
@@ -22,7 +21,7 @@ public ActionResult GetAllSchoolStudents(Guid id) {
     // Code
 }
 ```
-<!-- .element: class="list-fragment" -->
+
 ##==##
 
 ##  Questions
@@ -36,7 +35,6 @@ public ActionResult GetAllSchoolStudents(Guid id) {
     // Code
 }
 ```
-<!-- .element: class="list-fragment" -->
 
 ##==##
 
@@ -49,7 +47,7 @@ public ActionResult GetAllSchoolStudents(Guid id) {
 - [HttpPut]    :  Mise à jour complète
 - [HttpPatch]  : Mise à jour partielle
 - [HttpDelete] : Suppression
-<!-- .element: class="list-fragment" -->
+
 
 ##==##
 
@@ -58,4 +56,4 @@ Quel est le type de retour des methode d'un controller
 
 - Reponse : 
 - IActionResult
- <!-- .element: class="list-fragment" -->
+

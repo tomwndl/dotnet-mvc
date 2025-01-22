@@ -1,16 +1,14 @@
 # Communication avec le controller 
-
 Les vues reçoivent des données depuis le controller en utilisant un modèle fortement typé via la méthode return View(model);
 
-vue
+vue (Home/User.cshtml)
 ``` cshtml
 @model MyProject.Models.User
 
 <p>@Model.FirstName</p>
 <p>@Model.LastName</p>
 ```
-
-model
+model 
 ```  cs
   public class User
   {
@@ -18,17 +16,17 @@ model
       public string LastName { get; set; } = string.Empty;
   }
 ```
+##==##
 
-controller
+controller homeController
 ```  cs
-  public IActionResult Index()
+  public IActionResult User()
   {
       User user = new User
       {
           FirstName = "Tom",
           LastName = "Wendel"
       };
-
       return View(user);
   }
 ```
@@ -61,3 +59,4 @@ Modifiez la vue partiel précédemment créer pour y intégrer votre nom et pré
 - créer une classe user
 - Initier la classe avec vos information dans le HomeController
 - Utiliser la classe user dans votre partial view
+

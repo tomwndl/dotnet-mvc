@@ -6,7 +6,6 @@ Le routing dans ASP.NET MVC permet de :
 - Mapper les URLs aux actions des contrôleurs
 - Gérer les paramètres dans les URLs
 - Définir des patterns d'URL personnalisés (convention REST etc...)
-<!-- .element: class="list-fragment" -->
 
 ##==##
 

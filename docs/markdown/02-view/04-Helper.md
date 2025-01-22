@@ -51,13 +51,74 @@ equivalent de :
 
 ##==##
 
+# Tag Helpers :  fonctionnement
+
+``` cshtml
+@model Product
+
+<form asp-action="Create" asp-controller="Product" method="post">
+
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" placeholder="Entrez le nom du produit" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Ajouter le produit</button>
+</form>
+```
+
+##==##
+
+# Tag Helpers :  fonctionnement avec des types plus complexe
+
+``` cs
+public class Category
+{
+    public string Name { get; set; }
+}
+
+public class Product
+{
+    public string Name { get; set; }
+    public Category Category { get; set; } = new Category();
+}
+```
+
+##==##
+
+# Tag Helpers :  fonctionnement avec des types plus complexe
+
+``` cshtml
+@model Product
+
+<form asp-action="Create" asp-controller="Product" method="post">
+    <!-- Champ pour le nom du produit -->
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" placeholder="Nom du produit" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <!-- Champ pour la catégorie (objet imbriqué) -->
+    <div class="mb-3">
+        <label asp-for="Category.Name" class="form-label"></label>
+        <input asp-for="Category.Name" class="form-control" placeholder="Nom de la catégorie" />
+        <span asp-validation-for="Category.Name" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Ajouter le produit</button>
+</form>
+```
+
+##==##
+
 # Tag Helpers courants : inputs
 
 Les Tag Helpers sont basés sur des attributs commençant par asp- et sont utilisés pour rendre des éléments HTML dynamiques.
 
 Champ texte (TextBox): 
 ``` cshtml
-<input asp-for="UserName" class="form-control" placeholder="Entrez votre nom" />
+<input asp-for="Name" class="form-control" placeholder="Entrez votre nom" /> //
 ```
 
 Mot de passe : 
@@ -77,19 +138,6 @@ Boutons radio :
 ```
 ##==##
 
-# Tag Helpers courants : Formulaires
-
-Les Tag Helpers sont basés sur des attributs commençant par asp- et sont utilisés pour rendre des éléments HTML dynamiques.
-
-Formulaire avec asp-action et asp-controller
-``` cshtml
-<form asp-action="Submit" asp-controller="Home" method="post">
-    <input asp-for="UserName" class="form-control" />
-    <button type="submit">Envoyer</button>
-</form>
-```
-
-##==##
 
 # Validation automatique avec Tag Helpers
 
@@ -97,7 +145,7 @@ ASP.NET Core ajoute automatiquement les attributs de validation HTML (required, 
 Exemple dans le modèle C# :
 
 ``` cs
-public class User
+public class Product
 {
     [Required]
     public string Name { get; set; }
@@ -105,12 +153,26 @@ public class User
 ```
 
 ``` cs
-<input asp-for="Name" class="form-control" />
-<span asp-validation-for="Name" class="text-danger"></span>
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" placeholder="Entrez le nom du produit" />
+    </div>
 ```
 
 https://learn.microsoft.com/fr-fr/aspnet/core/mvc/views/working-with-forms?view=aspnetcore-9.0#the-form-tag-helper
 
+##==##
 
-# Formulaire simple
+# Formulaire simple (30 minutes)
+
+- Améliorer l'objet produit pour qu'il ai un nom (string), un prix (décimal), une description (string) et une couleur.
+- Créer le formulaire d'ajout de produit
+
+Les règle de gestion suivantes doivent être mise en place
+- La couleur ne peut être que rouge ou bleu. Quel type de donnée mettre en place au niveau du model ? Quel input utiliser au niveau du cshtml ?
+- le nom est obligatoire
+- Le prix doit être strictement supérieur à zéro
+- la description n'est pas obligatoire
+- La couleur est obligatoire
+
 
