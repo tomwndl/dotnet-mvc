@@ -22,17 +22,15 @@
 
 # Présentation
 
-![speaker](./assets/images/speakers/genez-t.png)
-![badge first-badge](./assets/images/speakers/badge_gcp_archi.png)
-![badge second-badge](./assets/images/speakers/badge_gcp_dev.png)
+![speaker](./assets/images/speakers/thomas-goetzmann-photo.jpg)
 ![company](./assets/images/logo-sfeir-blanc.png)
 
-## Thomas Goetzmann
+## Thomas **Goetzmann**
 
-### Architect/DevOps GCP/AWS
+### Développeur .Net / Agile / DevOps / Azure
 
 <!-- .element: class="icon-rule icon-first" -->
 
-### genez.t@sfeir.com
+### goetzmann.t@sfeir.com
 
 <!-- .element: class="icon-mail icon-third" -->
