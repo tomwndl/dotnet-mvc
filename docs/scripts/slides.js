@@ -28,7 +28,8 @@ function viewslides() {
 function modelSlides() {
   return [
     '03-Model/00-TITLE.md',
-    '03-Model/01-model-vs-dto.md'
+    '03-Model/01-model-vs-dto.md',
+    '03-Model/02-mapping.md'
   ];
 }
 

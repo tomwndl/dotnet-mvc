@@ -13,9 +13,7 @@ public IActionResult Privacy() // Home/Privacy
     return View(); // renvoie une vue
 }
 ```
-
-Notes:
-- Note  
+  
 
 ##==##
 

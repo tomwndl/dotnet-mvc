@@ -5,8 +5,6 @@
 * Savoir utiliser le routing et les filtres
 * Appliquer les bonnes pratiques de développement
 
-<!-- .element: class="list-fragment" -->
-
 Notes:
 - 
 
