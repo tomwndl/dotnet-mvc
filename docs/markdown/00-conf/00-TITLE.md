@@ -1,5 +1,6 @@
-<!-- .slide: class="first-slide" sfeir-level="2" sfeir-techno="xxx" -->
+<!-- .slide: class="first-slide" sfeir-level="1" sfeir-techno=".NET" -->
 
-# **Développement des controleurs et des actions**
+# Bienvenue à la formation .NET
 
+## SFEIR
 

@@ -74,7 +74,6 @@ Imaginez une classe User
  - Age
 
 ##==##
-
 # Exemple concret
 
 Le ViewModel correspondant envoyé à la vue 
@@ -88,6 +87,6 @@ Le ViewModel correspondant envoyé à la vue
     }
 ```
 
-- N'inclue que les informations essentielles à la vue 
+- N'inclue que les informations essentielles
 - N'inclue pas les informations sensibles (mot de passe)
-- Propriété age (calculée depuis la propriété User.BirthDate)
+- Propriété age (mapping)

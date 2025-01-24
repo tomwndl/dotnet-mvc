@@ -28,6 +28,8 @@ Rôle d'une action :
 - Elle traite les données (ex : lecture/écriture dans une base de données, logique métier).
 - Elle renvoie une réponse au client (ex : une vue, un JSON, un statut HTTP).
 
+Notes:
+- Note  
 
 ##==##
 
