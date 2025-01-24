@@ -12,7 +12,8 @@ function controllerSlides() {
     '01-controller/02-anatomie-controller.md',
     '01-controller/03-routes.md',
     '01-controller/04-filtres.md',
-    '01-controller/05-questions.md',
+    '01-controller/05-transition.md',
+    '01-controller/06-questions.md',
   ];
 }
 

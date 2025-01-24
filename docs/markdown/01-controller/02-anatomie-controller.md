@@ -3,23 +3,37 @@
 * Hérite de Controller ou ControllerBase
 * Nom se termine par "Controller"
 * Situé dans le dossier Controllers
-* Peut contenir plusieurs actions
+* Contient des actions
 * Injection de dépendances
 * Accès aux propriétés héritées (ViewBag, TempData, etc.)
 * Chaque méthode public d’un contrôleur peut être appelée en tant que point de terminaison HTTP. 
+
+
 ``` cs
 public IActionResult Privacy() // Home/Privacy
 {
-    return View(); // renvoie une vue
+    return View(); // renvoie la vue par defaut Privacy.cshtml
 }
 ```
-  
+##==##
+
+# Les actions
+
+En ASP.NET Core MVC, une action est une méthode publique définie dans un contrôleur qui gère les requêtes HTTP et retourne une réponse au client.
+Dans le langage plus courant on les appelles des points de terminaison /endpoints
+
+Rôle d'une action :
+- Point d'entrée du backend
+- Elle reçoit les requêtes HTTP entrantes (GET, POST, PUT, DELETE, etc.).
+- Elle traite les données (ex : lecture/écriture dans une base de données, logique métier).
+- Elle renvoie une réponse au client (ex : une vue, un JSON, un statut HTTP).
+
 
 ##==##
 
 <!-- .slide: class="two-column" -->
 
-## Types de retour
+## Types de retour d'une action
 
 ``` cs
 return View();                          // Vue par défaut
@@ -32,10 +46,16 @@ return NotFound();                     // 404
 return BadRequest();                   // 400
 return Ok();                           // 200
 ```
-<!-- .element: class="list-fragment" -->
+
 ##--##
 
-## Cas pratique : retour json
+## Exercices
+
+- Modifier l'action "Privacy" pour qu'elle retourne la vue "Index".
+
+##==##
+
+## Exercices : créer sa propre action
 
 Ajoutez une méthode Users qui renvoie une liste d'utilisateurs sous format json.
 voici les 3 utilisateurs à renvoyer : 
@@ -64,27 +84,6 @@ Solution :
 
 <!-- .slide: class="with-code" -->
 
-## Passage de paramètres
-
-L'injection de dépendances est un pattern qui permet :
-
-
-``` cs
-[FromBody]       // Corps de la requête JSON
-[FromForm]       // Données de formulaire
-[FromRoute]      // Paramètres de route
-[FromQuery]      // Query string
-[FromHeader]     // En-têtes HTTP
-
-public IActionResult Print(string name)  // /Home/Print?name=toto
-
-public IActionResult Create([FromForm] ProductModel product)
-```
-
-##==##
-
-<!-- .slide: class="with-code" -->
-
 ## Injection de dépendance dans les controller
 
 L'injection de dépendances est un pattern qui permet :
@@ -93,7 +92,6 @@ L'injection de dépendances est un pattern qui permet :
 - De faciliter les tests unitaires
 - De gérer le cycle de vie des objets
 - D'améliorer la maintenabilité du code
-<!-- .element: class="list-fragment" -->
 
 ##==##
 

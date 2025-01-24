@@ -55,11 +55,10 @@ Dans les projets ASP.NET MVC utilisant .NET Core ou .NET Framework, les fichiers
 📁 wwwroot
  └──📁 css
      ├── site.css
-📁 js
- └──📁 site.js
-     ├── main.tf  
-📁 lib
- └──📁 ...           
+     📁 js
+     ├── site.js  
+     📁 lib
+     └──📁 ...           
 ```
 
 l'inculsion ce fait au niveau du fichier _layout.cshtml
@@ -167,5 +166,5 @@ Pour charger un vue partiel via AJAX sans recharger toute la page :
 
 # Les partial views (vues partielles) : Exercice (10 min)
 
-- Créer une nouvelle vue partielle appelée _UserPartial contenant le texte : "Connecté : {votre nom} {vootre prénom}"
+- Créer une nouvelle vue partielle appelée _UserPartial contenant le texte : "Connecté : {votre nom} {votre prénom}"
 - Ajouter la vue partiel dans index.cshtml

@@ -1,11 +1,10 @@
 # Objectif de la matinée
 
 - Création de vues avec la syntaxe Razor
-- Utilisation des HTML Helpers et Tag Helpers
-- Réutilisation du code dans les vues
 - Utilisation des layouts
 - Intégration de CSS et JavaScript
-<!-- .element: class="list-fragment" -->
+- Réutilisation du code dans les vues
+- Utilisation des HTML Helpers et Tag Helpers
 
 Notes:
 - 
@@ -51,18 +50,6 @@ _ViewStart.cshtml : Définit du code exécuté avant chaque vue (souvent pour sp
 ``` cshtml
 @{ var today = DateTime.Now; }
 <p>Date du jour : @today.ToShortDateString()</p>
-```
-
-@Model pour accéder aux données envoyées depuis le contrôleur
-
-``` cshtml
-<h1>@Model.Id</h1>
-<p>@Model.Name</p>
-```
-
-Definition du model utilisé
-``` cshtml
-@model WebApplication1.Models.Product
 ```
 
 Blocs de condition ou de boucle

@@ -1,13 +1,6 @@
 # Communication avec le controller 
 Les vues reçoivent des données depuis le controller en utilisant un modèle fortement typé via la méthode return View(model);
 
-vue (Home/User.cshtml)
-``` cshtml
-@model MyProject.Models.User
-
-<p>@Model.FirstName</p>
-<p>@Model.LastName</p>
-```
 model 
 ```  cs
   public class User
@@ -16,7 +9,6 @@ model
       public string LastName { get; set; } = string.Empty;
   }
 ```
-##==##
 
 controller homeController
 ```  cs
@@ -30,7 +22,15 @@ controller homeController
       return View(user);
   }
 ```
+##==##
 
+vue (Home/User.cshtml)
+``` cshtml
+@model MyProject.Models.User
+
+<p>Model.FirstName</p>
+<p>Model.LastName</p>
+```
 
 ##==##
 

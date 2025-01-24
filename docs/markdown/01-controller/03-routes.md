@@ -1,5 +1,5 @@
 
-## Définition
+# Routing : définition
 
 Le routing dans ASP.NET MVC permet de :
 
@@ -9,10 +9,9 @@ Le routing dans ASP.NET MVC permet de :
 
 ##==##
 
-
 <!-- .slide: class="with-code" -->
 
-## Configuration de base
+# Configuration de base
 
 ``` cs
 // Dans Program.cs
@@ -21,24 +20,98 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 ```
 
-Notes:
+Notes: Nom de la route : "Default"
+Modèle URL : "{controller}/{action}/{id}"
+Valeurs par défaut : { controller = "Home", action = "Index", id = UrlParameter.Optional }
+Si une URL / est appelée, elle ira vers HomeController.Index.
+id est optionnel.
 
 ##==##
 
 
 <!-- .slide: class="with-code" -->
 
-## Routes par attributs
+# Routes par attributs
 
 ``` cs
-[Route("api/[controller]")]
-public class ProductsController : Controller
+[Route("api/[controller]")]  
+public class ProductController : Controller
+{
+    [Route("{category}/{id:int}")]
+    public ActionResult GetOneProduct(string category, int id)  // api/product/toto/5
+    {
+        // Logique ici
+        return View();
+    }
+
+    [Route("all")]
+    public ActionResult GetAllProduct()  // api/product/all
+    {
+        return View();
+    }
+}
+```
+
+##==##
+<!-- .slide: class="with-code" -->
+
+# Cas pratique - CRUD - (30 minutes)
+
+Créer une classe product dans le dossier model avec 2 paramètres : Id (guid) et Name (string)
+
+Créer un controller Product avec une liste de product
+``` cs
+private List<Product> products = new List<Product>() { new Product("switch"), new Product("ps4"), new Product("xbox") };
+```
+
+Créer les 4 actions :
+- GetAll : Affiche tout les products. Accessible via /products 
+- Get : Affiche 1 product. Accessible via /products/{id} 
+- Delete : supprime un product puis affiche la liste des products restant. Accessible via /products/delete/{id}
+- Post : Ajoute un product puis affiche la liste des product restant. Accessible via /Products/add/{name}
+
+##==## 
+
+# Correction
+``` cs
+// todo
+```
+
+##==## 
+
+# Introduction aux verbes HTTP
+
+Les verbes HTTP (ou méthodes HTTP) définissent le type d'action qu'une requête effectuera sur une ressource. 
+Ils sont fondamentaux pour les applications web, les API REST et les services web en général.
+
+
+##==## 
+
+# Les principaux verbes HTTP
+
+| Verbe | Fonction principale | Effet sur la ressource | Corps autorisé |
+|------|--------|---------|----------|
+| GET | Récupérer des données | Aucun changement (lecture seule) | Non  |
+| POST | Créer une ressource  | Ajoute une nouvelle ressource | oui  |
+| PUT | Mettre à jour ou créer une ressource | Remplace toute la ressource | oui  |
+| PATCH | Mettre à jour partiellement | Modifie partiellement la ressource  | oui  |
+| DELETE | Supprimer une ressource  | Supprime la ressource spécifiée | Non  |
+
+
+##==## 
+
+# Comment les utiliser dans nos controller
+
+
+``` cs
+[Route("api/[controller]")]  
+public class ProductsController : Controller // route de base du controller = api/products
 {
     [HttpGet]  // GET: api/products
     public IActionResult Index() { }
 
-    [HttpGet("{id}")]  // GET: api/products/5
-    public IActionResult Details(int id) { }
+    [HttpGet("{name}")]  // GET: api/products/toto
+    public IActionResult Details(string name) { } 
 
     [HttpPost("create")]  // POST: api/products/create
     public IActionResult Create([FromBody] Product product) { }
@@ -48,20 +121,15 @@ public class ProductsController : Controller
 }
 ```
 
+[FromBody] indique à ASP.NET que les données doivent être extraites du corps de la requête HTTP, ce qui est nécessaire pour les requêtes POST.
+
 ##==##
 
 
 <!-- .slide: class="with-code" -->
 
-## Bonne pratiques REST
+## Quelques bonnes pratiques (convention REST)
 
-``` cs
-[GET] /products                  // Liste
-[GET] /products/5                // Détails
-[DELETE] /products/5                // Détails
-[GET] /products/category/games   // Filtrage
-[POST] /products                 // Creation
-```
 ``` cs
 [HttpGet]    // Lecture
 [HttpPost]   // Création
@@ -70,25 +138,11 @@ public class ProductsController : Controller
 [HttpDelete] // Suppression
 ```
 
-##==##
-
-<!-- .slide: class="with-code" -->
-
-## Cas pratique - CRUD - (30 minutes)
-
-Créer une classe product dans le dossier model avec 2 paramètres : Id (guid) et Name (string)
-
-Créer un controller Product avec une liste de product
 ``` cs
-private List<Product> products = new List<Product>() { new Product("switch"), new Product("ps4"), new Product("xbox") };
+[GET] /products                  // Liste
+[GET] /products/5                // Détails
+[DELETE] /products/5              
+[GET] /products/category/games   // Filtrage
+[POST] /products                 // Creation
 ```
-
-Créer les 4 méthodes :
-- GetAll : récupère tout les products
-- Get : récupère 1 product (via id)
-- Delete : supprime un product (via id)
-- Create :  créer un nouveau product (via id)
-
-
-
 

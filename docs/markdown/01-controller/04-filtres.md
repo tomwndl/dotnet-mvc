@@ -9,7 +9,6 @@ Les filtres sont des attributs qui permettent de :
 - L'ordre d'exécution peut être personnalisé avec la propriété Order
 - Les filtres peuvent être injectés avec des dépendances via [ServiceFilter] ou [TypeFilter]
 - Ils peuvent être combinés pour créer des comportements complexes
-<!-- .element: class="list-fragment" -->
 
 ##==##
 
