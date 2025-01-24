@@ -36,7 +36,7 @@
 
 ##==##
 
-<!-- .slide: class="transition-bg-blue-1" -->
+<!-- .slide: class="transition-bg-green-3" -->
 
 # Tour de table
 
