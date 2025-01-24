@@ -166,6 +166,7 @@ https://learn.microsoft.com/fr-fr/aspnet/core/mvc/views/working-with-forms?view=
 # Formulaire simple (30 minutes)
 
 - Améliorer l'objet produit pour qu'il ai un nom (string), un prix (décimal), une description (string) et une couleur.
+- Créer une vue productList dans View/Product 
 - Créer le formulaire d'ajout de produit
 
 Les règle de gestion suivantes doivent être mise en place

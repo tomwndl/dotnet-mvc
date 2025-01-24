@@ -174,5 +174,3 @@ CreateMap<Product, ProductViewModel>()
     .ForMember(dest => dest.Description, opt => opt.MapFrom(src => String.IsNullOrEmpty(src.Description) ? "Pas de description" : src.Description))
     .ReverseMap()
 ```
-
-# Exercice (30 minutes)
