@@ -1,11 +1,16 @@
+<!-- .slide: class="transition-bg-blue-2" -->
+# .NET Framework
+
+##==##
+
 # Avant le dotnet framework
 
-Dans les années 90, Microsoft utilise et propose:
-- Win32 API
-- C++ avec MFC (Microsoft Foundation Classes)
-- COM (Component Object Model)
-- Visual Basic qui permettait du développement avec une interface graphique
-- ASP (Active Server Page), pour des pages web dynamiques côté serveur
+Dans les **années 90**, Microsoft utilise et propose:
+- **Win32** API
+- **C++** avec MFC (Microsoft Foundation Classes)
+- **COM** (Component Object Model)
+- **Visual Basic** qui permettait du développement avec une interface graphique
+- **ASP** (Active Server Page), pour des pages web dynamiques côté serveur
 
 ##==##
 
