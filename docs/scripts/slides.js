@@ -26,6 +26,8 @@ function csharp() {
     '11-csharp/01-class-records.md',
     '11-csharp/02-interfaces.md',
     '11-csharp/03-string-literals.md',
+    '11-csharp/04-pattern-matching.md',
+    '11-csharp/05-new-features.md',
   ];
 }
 
