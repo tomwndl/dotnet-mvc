@@ -24,6 +24,8 @@ function csharp() {
   return [
     '11-csharp/00-TITLE.md',
     '11-csharp/01-class-records.md',
+    '11-csharp/02-interfaces.md',
+    '11-csharp/03-string-literals.md',
   ];
 }
 
