@@ -16,6 +16,9 @@ function history() {
     '10-history/02-net-framework-history.md',
     '10-history/03-net-core-history.md',
     '10-history/04-net-architecture.md',
+    '10-history/05-exercices.md',
+  ];
+}
   ];
 }
 

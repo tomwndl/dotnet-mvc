@@ -1,4 +1,4 @@
-<!-- .slide: class="transition-bg-blue-2" -->
+<!-- .slide: class="transition-bg-sfeir-2" -->
 # .NET Core, Standard, Mono et .NET
 
 ##==##
