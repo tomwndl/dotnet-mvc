@@ -19,6 +19,11 @@ function history() {
     '10-history/05-exercices.md',
   ];
 }
+
+function csharp() {
+  return [
+    '11-csharp/00-TITLE.md',
+    '11-csharp/01-class-records.md',
   ];
 }
 
@@ -56,6 +61,7 @@ function formation() {
     //
     ...schoolSlides(), //
     ...history(), //
+    ...csharp(), //
     ...controllerSlides(), //
     ...viewslides(), //
     ...modelSlides(), //
