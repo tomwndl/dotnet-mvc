@@ -44,7 +44,7 @@ string Describe(List<int> list) => list switch
     [] => "vide",
     [var x] => $"unique: {x}",
     [var x, _] => $"début: {x}",
-    [.., var x] => $"fin: {x}"
+    _ => throw new Exception("invalid");
 };
 ```
 

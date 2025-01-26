@@ -8,5 +8,5 @@
 1. class et record
 2. interfaces
 3. strings
-4. pattern-matching
+4. switch-expression et pattern-matching
 5. nouveautés / petits tricks

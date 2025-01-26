@@ -284,6 +284,15 @@ public class Panier
 Comment créer une variante d'un produit existant avec un prix soldé ?
 <!-- .element: class="admonition question" -->
 
+##==##
+
+# Proposition de solution
+
+<!-- .slide: class="with-code max-height"  -->
+
+Comment créer une variante d'un produit existant avec un prix soldé ?
+<!-- .element: class="admonition question" -->
+
 ```csharp
 
 var chocapics = new Produit("c1", "Chocapic", (decimal)2.95, "Des céréales au chocolat");
