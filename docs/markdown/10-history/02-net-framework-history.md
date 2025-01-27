@@ -7,8 +7,8 @@
 
 Dans les **années 90**, Microsoft utilise et propose:
 - **Win32** API
-- **C++** avec MFC (Microsoft Foundation Classes)
 - **COM** (Component Object Model)
+- **C++** avec MFC (Microsoft Foundation Classes)
 - **Visual Basic** qui permettait du développement avec une interface graphique
 - **ASP** (Active Server Page), pour des pages web dynamiques côté serveur
 
@@ -34,6 +34,7 @@ Dans les **années 90**, Microsoft utilise et propose:
 
 ## .Net Framework 1.0
 
+- C# 
 - Sites web avec **ASP.NET**
 - On peut se connecter à des bases de données grâce à **ODBC** (=interface en C qui permet d’accéder à différentes bases de données)
 - Sortie de **mono**
