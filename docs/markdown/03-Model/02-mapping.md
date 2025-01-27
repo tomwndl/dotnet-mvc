@@ -24,8 +24,9 @@ model vers ViewModel
 # Utilisation des ViewModel : Exercice (20min) 
 
 - Modifier votre action GetAll pour renvoyer la liste des produits en utilisant un ProductViewModel  
-- Créer une vue ProductList dans /View/Product utilisant une liste de ProductViewModel. Ajoute le code razor pour afficher toute les caractéristiques des produits dans la vue
-- Dans _Layout, Ajouter un onglet "Product List" renvoyant vers l'action getAll du ProductController
+- Créer une vue ProductList dans /View/Product utilisant une liste de ProductViewModel. 
+- Ajoutez le code razor pour afficher toute les caractéristiques des produits dans un tableau dans la vue
+- Dans _Layout, Ajouter un onglet "Product List" renvoyant vers la vue
 
 
 ##==##
@@ -162,7 +163,7 @@ Documentation : https://docs.automapper.org/en/stable/
 # Exercice (15 minutes)
 
 - Utilisez automapper pour mapper Product vers ProductViewModel
-- Ajouter un mapping personalisé pour renvoyer "Pas de description" si le champs description et null, vide ou égale à " "
+- Ajouter un mapping personnalisé pour renvoyer "Pas de description" si le champs description et null, vide ou égale à " "
 - Testez
 
 ##==##
