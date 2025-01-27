@@ -168,7 +168,7 @@ https://learn.microsoft.com/fr-fr/aspnet/core/mvc/views/working-with-forms?view=
 - Améliorer l'objet produit pour qu'il ai un nom (string), un prix (décimal), une description (string) et une couleur.
 - Créer une vue productList dans View/Product 
 - Créer le formulaire d'ajout de produit
-- Ajouter un onglet "Product" dans la navbar pour acceder au formulaire
+- Ajouter un onglet "Product" dans la navbar pour accéder au formulaire
 
 Les règle de gestion suivantes doivent être mise en place
 - La couleur ne peut être que rouge ou bleu. Quel type de donnée mettre en place au niveau du model ? Quel input utiliser au niveau du cshtml ?
