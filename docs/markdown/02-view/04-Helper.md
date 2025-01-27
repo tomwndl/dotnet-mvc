@@ -3,7 +3,7 @@
 Les HTML Helpers et Tag Helpers sont des outils en ASP.NET MVC permettant de générer du code HTML de manière dynamique
 
 HTML Helpers :
-- Utilisee des méthodes C# dans Razor
+- Utilise des méthodes C# dans Razor
 
 Tags Helpers :
 - Offrent une syntaxe plus intuitive via des attributs HTML.
@@ -69,7 +69,7 @@ equivalent de :
 
 ##==##
 
-# Tag Helpers :  fonctionnement avec des types plus complexe
+# Tag Helpers :  fonctionnement avec des types plus complexes
 
 ``` cs
 public class Category
@@ -86,7 +86,7 @@ public class Product
 
 ##==##
 
-# Tag Helpers :  fonctionnement avec des types plus complexe
+# Tag Helpers :  fonctionnement avec des types plus complexes
 
 ``` cshtml
 @model Product
@@ -168,6 +168,7 @@ https://learn.microsoft.com/fr-fr/aspnet/core/mvc/views/working-with-forms?view=
 - Améliorer l'objet produit pour qu'il ai un nom (string), un prix (décimal), une description (string) et une couleur.
 - Créer une vue productList dans View/Product 
 - Créer le formulaire d'ajout de produit
+- Ajouter un onglet "Product" dans la navbar pour acceder au formulaire
 
 Les règle de gestion suivantes doivent être mise en place
 - La couleur ne peut être que rouge ou bleu. Quel type de donnée mettre en place au niveau du model ? Quel input utiliser au niveau du cshtml ?

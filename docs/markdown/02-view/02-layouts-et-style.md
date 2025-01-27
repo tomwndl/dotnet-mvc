@@ -43,7 +43,7 @@ Notes:
 Modifier le layout :
 - Changer le titre de l'application : BPMED Formation
 - Supprimer l'onglet "privacy"
-- Modifier le footer egalement (titre et onglet lien "Privacy")
+- Modifier le footer également (titre et onglet lien "Privacy")
 
 ##==##
 

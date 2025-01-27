@@ -40,6 +40,7 @@ function controllerSlides() {
     '01-controller/04-filtres.md',
     '01-controller/05-transition.md',
     '01-controller/06-questions.md',
+    '01-controller/07-Q&A.md',
   ];
 }
 
@@ -50,12 +51,15 @@ function viewslides() {
     '02-view/02-layouts-et-style.md',
     '02-view/03-communication-controller.md',
     '02-view/04-Helper.md',
+    '02-view/06-Q&A.md',
   ];
 }
 function modelSlides() {
   return [
     '03-Model/00-TITLE.md',
-    '03-Model/01-model-vs-dto.md'
+    '03-Model/01-model-vs-dto.md',
+    '03-Model/02-mapping.md',
+    '03-Model/06-Q&A.md'
   ];
 }
 

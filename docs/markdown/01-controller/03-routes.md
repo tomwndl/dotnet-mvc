@@ -71,10 +71,53 @@ Créer les 4 actions :
 - Post : Ajoute un product puis affiche la liste des product restant. Accessible via /Products/add/{name}
 
 ##==## 
-
+<!-- .slide: class="with-code max-height" -->
 # Correction
+
 ``` cs
-// todo
+    [Route("product")]
+    public class ProductController : Controller
+    {
+        private List<Product> products = new List<Product>() { new Product("switch"), new Product("ps4"), new Product("xbox") };
+
+        public IActionResult GetAll()
+        {
+            return Json(products);
+        }
+
+        [Route("{id}")]
+        public IActionResult Get(Guid id)
+        {
+            var product = products.FirstOrDefault(x => x.Id == id);
+            if(product == null)
+            {
+                return NotFound();
+            }
+
+            return Json(product);
+        }
+
+        [Route("delete/{id}")]
+        public IActionResult Delete(Guid id)
+        {
+            var product = products.FirstOrDefault(x => x.Id == id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            products.Remove(product);
+            return Json(products);
+        }
+
+        [Route("add/{id}")]
+        public IActionResult Create(string name)
+        {
+            var product = new Product(name);
+            products.Add(product);
+            return Json(products);
+        }
+    }
 ```
 
 ##==## 

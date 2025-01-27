@@ -2,12 +2,12 @@
 
 # Présentation
 
-![speaker](./assets/images/speakers/genez-t.png)
+![speaker](./assets/speakers/wendel-tom.jpg)
 ![company](./assets/images/logo-sfeir-blanc.png)
 
 ## Tom Wendel 
 
-### Développeur .Net / Azure
+### Développeur .Net/Azure - Engineering Manager
 
 <!-- .element: class="icon-rule icon-first" -->
 
