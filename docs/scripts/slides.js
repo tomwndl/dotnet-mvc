@@ -63,6 +63,15 @@ function modelSlides() {
   ];
 }
 
+function middlewareSlides() {
+  return [
+    '12-middleware/00-TITLE.md',
+    '12-middleware/01-dependency-injection.md',
+    '12-middleware/02-middleware.md',
+    '12-middleware/03-architecture.md',
+  ];
+}
+
 
 function formation() {
   return [
@@ -73,6 +82,7 @@ function formation() {
     ...controllerSlides(), //
     ...viewslides(), //
     ...modelSlides(), //
+    ...middlewareSlides(), //
   ].map((slidePath) => {
     return { path: slidePath };
   });
