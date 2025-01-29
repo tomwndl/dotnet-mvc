@@ -121,10 +121,10 @@ Utilisation dans une autre vue :
 <h1>Page d'accueil</h1>
 
 <!-- Inclusion de la vue partielle -->
-@Html.Partial("_UserInfo")
+@Html.Partial("_UserProfile")
 
 <!-- Alternative asynchrone -->
-@await Html.PartialAsync("_UserInfo")
+@await Html.PartialAsync("_UserProfile")
 ```
 ##==##
 
