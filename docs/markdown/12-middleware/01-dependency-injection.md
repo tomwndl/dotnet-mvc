@@ -60,3 +60,16 @@ Le conteneur d'injection de dépendances à la rescousse !
     - Pour une requête unique: si l'interface est utilisée dans 2 services différents, **la même instance** sera utilisée
 - **Transient** : une instance par appel
     - Pour une requête unique: si l'interface est utilisée dans 2 services différents, **2 instances différentes** seront créées
+
+
+##==##
+
+<!-- .slide: class="exercice" -->
+
+# Exercice
+
+- Créer un service **`IProductService`** qui a une méthode **`GetAll`** qui retourne une liste de produits
+- Créer l'implémentation **`InMemoryProductService`** qui contient une liste static de produits en mémoire
+- Trouver le bon **lifecycle** pour que la liste ne soit pas réinitialiser entre différentes requêtes
+- _Bonus: Quel lifecycle serait adapté pour un service qui appel une API externe pour récupérer les produits ?_
+<!-- .element: class="list-fragment" -->

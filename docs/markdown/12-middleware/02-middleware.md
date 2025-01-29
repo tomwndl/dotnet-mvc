@@ -69,3 +69,11 @@ public class ExceptionHandler(ILogger<ExceptionHandler> logger) : IExceptionHand
 // 2. Ajouter le middleware dans Program.cs
 builder.Services.AddExceptionHandler<ExceptionHandler>();
 ```
+
+##==##
+
+# Exercice
+<!-- .slide: class="exercice" -->
+
+- Mettre en place un IExceptionHandler qui logge les exceptions non gérées
+- Changer la variable d'environnement `ASPNETCORE_ENVIRONMENT` de `Development` à `Production` dans `Properties/launchSettings.json` et observer le comportement

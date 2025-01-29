@@ -1,4 +1,4 @@
 # Architecture
 
-Faire évoluer son architecture au fur et à mesure.
-Avoir des Unit-Tests en place.
+- Faire évoluer son architecture au fur et à mesure.
+- Avoir des Unit-Tests en place.
