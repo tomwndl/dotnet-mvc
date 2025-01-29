@@ -124,16 +124,13 @@ CreateMap<Order, OrderDto>()
 Ignorer certaines propriétés
 ``` cs
 CreateMap<Order, OrderDto>()
-    .ForMember(dest => dest.OrderId, opt => opt.MapFrom(src => src.Id))
-    .ForMember(dest => dest.OrderDate, opt => opt.MapFrom(src => src.Date));
+    .ForMember(dest => dest.OrderId, opt => opt.Ignore())
+    .ForMember(dest => dest.OrderDate, opt => opt.Ignore());
 ```
 ##==##
 
 # Exemples de mappings courants
 
-Mapping avec transformation de données
-``` cs
-CreateMap<Product, ProductDto>().ReverseMap();
 ```
 Gestion des null et valeurs par défaut
 ``` cs

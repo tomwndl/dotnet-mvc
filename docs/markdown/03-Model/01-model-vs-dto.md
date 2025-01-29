@@ -10,16 +10,12 @@ Model :
 # ViewModel 
 - Sert à organiser les données pour l'affichage et la saisie dans une vue.
 - Peux contenir des champs calculés, des validations spécifiques, ou des données provenant de plusieurs modèles.
-- Peut contenir des validations, des champs formatés et des options d'affichage.
-- Étroitement lié aux contrôleurs MVC et aux vues Razor.
 - Exemples : ProductViewModel, UserProfileViewModel
 
 ##==##
 
 # DTO (Data Transfer Object)
-
-- Sert à transférer des données entre couches (système backend, API, services).
-- Un DTO (Data Transfer Object) est un objet utilisé pour transporter des données entre différentes couches d'une application.
+- Un viewModel est une sorte de DTO
 - Il s'agit d'une classe simple qui contient uniquement des propriétés et aucune logique métier, son but est de transférer des données de manière structurée.
 - Idéal pour des communications entre applications (dans la création/ consommation d'API)
 - Exemple : CreateUserRequest, CreateUserResponse
