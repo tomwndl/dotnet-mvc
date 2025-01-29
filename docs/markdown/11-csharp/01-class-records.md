@@ -73,7 +73,8 @@ public class Person
     - `protected`
     - `internal`
 - `readonly`
-- `DateTimeOffset` à la place d'un `DateTime`
+- `DateTimeOffset` à la place d'un ~~`DateTime`~~ 
+    - contient l'information de la timezone de manière explicite
 <!-- .element: class="list-fragment" -->
 
 ##==##
@@ -115,6 +116,10 @@ public class Person
 ```csharp
 public class Person
 {
+    private DateTimeOffset birthDay;
+
+    public string Login {get; set;} 
+
     // ...
     public Person(string login, DateTimeOffset birthDay, Address address, ILogger logger)
     {
@@ -143,6 +148,8 @@ public class Person
 
 <br><br>
 
+- immutable
+- value based equality
 - `init`
     ```csharp
     var addressSfeir = new Address
@@ -156,9 +163,7 @@ public class Person
 
     var addressSfeir = new Address("1 avenue de l'Europe", "Schiltigheim", "67300");
     ```
-- immutable
 - required
-- value based equality
 <!-- .element: class="list-fragment" -->
 
 ##--##
