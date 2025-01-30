@@ -1,5 +1,7 @@
 # Middleware et DI
 
+<!-- .slide: class="transition-bg-sfeir-2" -->
+
 ##==##
 
 # Objectifs

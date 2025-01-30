@@ -68,6 +68,7 @@ function middlewareSlides() {
     '12-middleware/00-TITLE.md',
     '12-middleware/01-dependency-injection.md',
     '12-middleware/02-middleware.md',
+    '12-middleware/04-divers.md',
     '12-middleware/03-architecture.md',
   ];
 }
