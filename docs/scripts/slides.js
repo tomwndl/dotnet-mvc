@@ -73,6 +73,16 @@ function middlewareSlides() {
   ];
 }
 
+function efcoreSlides() {
+  return [
+    '13-efcore/00-TITLE.md',
+    '13-efcore/01-install.md',
+    '13-efcore/02-codefirst.md',
+    '13-efcore/03-dbfirst.md',
+    '13-efcore/04-migrations.md',
+  ];
+}
+
 
 function formation() {
   return [
@@ -84,6 +94,7 @@ function formation() {
     ...viewslides(), //
     ...modelSlides(), //
     ...middlewareSlides(), //
+    ...efcoreSlides(), //
   ].map((slidePath) => {
     return { path: slidePath };
   });
